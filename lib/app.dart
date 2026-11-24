@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'features/auth/auth_gate.dart';
 import 'features/notes/providers/note_provider.dart';
 import 'features/schedule/providers/schedule_provider.dart';
 import 'features/tasks/providers/task_provider.dart';
@@ -36,7 +37,7 @@ class StudyFlowApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
           useMaterial3: true,
         ),
-        home: const Scaffold(body: Center(child: Text('StudyFlow'))),
+        home: const AuthGate(),
       ),
     );
   }
